@@ -1,20 +1,20 @@
 # Hosting the prototype for free
 
-You get two links to send the client. Neither costs anything.
+You get two links to share. Neither costs anything.
 
-| Link | What the client sees | Where it lives |
+| Link | What visitors see | Where it lives |
 |---|---|---|
 | **Website** | The finished site: fast, all animations, all pages. | GitHub Pages — `https://lam-thai.github.io/amanah-prototype/` |
 | **Try the admin** | A real WordPress in their browser. They can open wp-admin, edit pages, move blocks. Their changes vanish when they close the tab, so they can't break anything. | playground.wordpress.net, loading the theme from your GitHub repo |
 
 ## Why two links?
 
-WordPress needs a server running PHP. Free PHP hosts are slow, show ads, and sometimes suspend sites, which isn't a good look in front of a client. So:
+WordPress needs a server running PHP. Free PHP hosts are slow, show ads, and sometimes suspend sites, which isn't a good look. So:
 
 - the **website** link is WordPress's output saved as plain files. That makes it fast and free forever, and it looks identical.
 - the **admin** link proves it's real WordPress, without paying for a server.
 
-When the client signs, the same theme folder installs on their real hosting (any WordPress host) in minutes.
+For a real launch, the same theme folder installs on any WordPress host in minutes.
 
 ## Steps
 
@@ -55,5 +55,5 @@ git push public main
 ## Good to know
 
 - The repo must be **public** for free GitHub Pages and for the admin link.
-- The site tells search engines not to index it, so the prototype won't show up in Google under the client's name.
+- The site tells search engines not to index it, so the prototype won't show up in Google.
 - Forms are demo-only: they validate and show a thank-you message but send nothing.

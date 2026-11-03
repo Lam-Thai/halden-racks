@@ -1,0 +1,85 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "halden/story",
+	"title": "Story (sticky media + steps)",
+	"category": "halden",
+	"description": "\"What your rack runs on\": sticky image with caption, scrolling steps with a big number, chips and a live line graphic, then the carriers band. Steps and carriers are lists edited in the code editor.",
+	"attributes": {
+		"heading": { "type": "string", "default": "What your rack runs on." },
+		"intro": { "type": "string", "default": "You bring the servers. The building brings everything around them, sized for dense compute and independently audited." },
+		"steps": {
+			"type": "array",
+			"default": [
+				{
+					"key": "Power",
+					"num": "25",
+					"unit": "kW per rack",
+					"title": "Redundant power, ready for GPUs",
+					"text": "Every rack runs on N+1 UPS with diesel generator failover. HAL2 delivers three-phase power for high-density compute.",
+					"chips": [ "N+1 UPS", "Generator failover", "208 V three-phase" ],
+					"image": "power.webp",
+					"alt": "Close-up of a circuit board with glowing amber components.",
+					"cap": "Power room",
+					"line": "power"
+				},
+				{
+					"key": "Cooling",
+					"num": "Lake",
+					"unit": "Alder Lake",
+					"title": "Cooled by deep lake water",
+					"text": "The building is cooled through deep lake water, drawn from Alder Lake through the town's lake-water loop.",
+					"chips": [ "Alder Lake water cooling", "High-density ready" ],
+					"image": "cooling.webp",
+					"alt": "A cold aisle between glass-fronted cabinets, lit blue.",
+					"cap": "Cooling plant",
+					"line": "waves"
+				},
+				{
+					"key": "Security",
+					"num": "SOC 2",
+					"unit": "Type II",
+					"title": "Locked, logged and audited",
+					"text": "Biometric access, staff on site around the clock, unescorted access for your team, and a SOC 2 Type II report your auditors can read.",
+					"chips": [ "Biometric access", "24/7 on-site staff", "PIPEDA and PHIPA" ],
+					"image": "security.webp",
+					"alt": "Server racks beside a mounted screen showing a login panel.",
+					"cap": "Access control",
+					"line": "audit"
+				},
+				{
+					"key": "Connectivity",
+					"num": "400",
+					"unit": "+ networks",
+					"title": "Carriers one cross connect away",
+					"text": "Your rack sits in the building where Canadian carriers meet. Cross connects are provisioned from our end in 1 to 2 business days, with no cap.",
+					"chips": [ "AlderIX at 100 Gbps", "Diverse fibre entry", "No cross connect cap" ],
+					"image": "meet-me-room.webp",
+					"alt": "Patch panels with neatly bundled grey network cables.",
+					"cap": "Meet-me room",
+					"line": "conv"
+				}
+			]
+		},
+		"convLabel": { "type": "string", "default": "Your rack" },
+		"carriersTitle": { "type": "string", "default": "On-net at 200 Foundry Row, ready to cross connect." },
+		"carriersText": { "type": "string", "default": "A sample of the carriers, exchange and cloud on-ramps you can reach from your rack without leaving the building." },
+		"carriers": {
+			"type": "array",
+			"default": [
+				{ "name": "AlderIX", "kind": "Internet exchange" },
+				{ "name": "Northline Fibre", "kind": "Carrier" },
+				{ "name": "Meridian Transit", "kind": "Carrier" },
+				{ "name": "Arcwave Networks", "kind": "Carrier" },
+				{ "name": "Polar Edge", "kind": "Network" }
+			]
+		},
+		"carriersMore": {
+			"type": "object",
+			"default": { "value": "400+", "label": "Networks in the building" }
+		}
+	},
+	"supports": { "html": false, "anchor": true },
+	"render": "file:./render.php",
+	"viewScript": [ "halden-lines", "file:./view.js" ]
+}

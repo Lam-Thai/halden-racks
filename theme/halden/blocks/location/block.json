@@ -1,0 +1,59 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "halden/location",
+	"title": "Location map",
+	"category": "halden",
+	"description": "Aerial map with clickable pins that zoom and spotlight each place, plus the matching location cards. Places are a list edited in the code editor (x/y = pin position in % of the image).",
+	"attributes": {
+		"anchor": { "type": "string", "default": "location" },
+		"heading": { "type": "string", "default": "Two doors on the same street." },
+		"intro": { "type": "string", "default": "Our data centre and our head office stand side by side in Port Alder. The team that runs your racks works next door." },
+		"image": { "type": "string", "default": "map.svg" },
+		"imageAlt": { "type": "string", "default": "Stylised map of Port Alder showing the data centre at 200 Foundry Row, the head office at 18 Quay Street and Central Station on the rail line." },
+		"landmark": {
+			"type": "object",
+			"default": { "label": "Central Station", "x": 40, "y": 80 }
+		},
+		"captionStart": { "type": "string", "default": "Foundry Row and Quay Street" },
+		"captionEnd": { "type": "string", "default": "Port Alder" },
+		"places": {
+			"type": "array",
+			"default": [
+				{
+					"title": "200 Foundry Row",
+					"kind": "Data centre",
+					"icon": "server",
+					"text": "Your racks, the meet-me room and 400+ networks under one roof.",
+					"tip": "200 Foundry Row · Data centre",
+					"label": "200 Foundry Row, the data centre",
+					"x": 37,
+					"y": 38,
+					"fx": 37,
+					"fy": 40,
+					"zoom": 1.12,
+					"r": 22,
+					"color": "red"
+				},
+				{
+					"title": "18 Quay Street, Suite 400",
+					"kind": "Head office",
+					"icon": "office",
+					"text": "Sales, support and engineering, a short walk from your cabinet.",
+					"tip": "18 Quay Street · Head office",
+					"label": "18 Quay Street, Suite 400, head office",
+					"x": 73,
+					"y": 27,
+					"fx": 73,
+					"fy": 36,
+					"zoom": 1.12,
+					"r": 20,
+					"color": "lake"
+				}
+			]
+		}
+	},
+	"supports": { "html": false, "anchor": true },
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}

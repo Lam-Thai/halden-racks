@@ -33,7 +33,7 @@ const git = (...args) => run('git', args, { cwd: DIST });
 fs.rmSync(path.join(DIST, '.git'), { recursive: true, force: true });
 git('init', '-q', '-b', 'gh-pages');
 git('add', '-A');
-git('-c', 'user.name=Amanah prototype deploy', '-c', 'user.email=deploy@users.noreply.github.com', 'commit', '-q', '-m', `Deploy ${new Date().toISOString()}`);
+git('-c', 'user.name=Halden prototype deploy', '-c', 'user.email=deploy@users.noreply.github.com', 'commit', '-q', '-m', `Deploy ${new Date().toISOString()}`);
 console.log(`Pushing dist/ to ${repo} (branch gh-pages)…`);
 git('push', '-q', '--force', remote, 'gh-pages');
 fs.rmSync(path.join(DIST, '.git'), { recursive: true, force: true });

@@ -9,7 +9,7 @@ const pkg = JSON.parse(await fs.readFile('package.json', 'utf8'));
 const BASE = (args.base ?? pkg.config?.pagesBase ?? '').replace(/\/$/, '');
 const PORT = Number(args.port || 8080);
 const ROOT = path.resolve('dist');
-const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.avif': 'image/avif', '.webp': 'image/webp', '.woff2': 'font/woff2', '.txt': 'text/plain' };
+const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.avif': 'image/avif', '.webp': 'image/webp', '.woff2': 'font/woff2', '.mp4': 'video/mp4', '.txt': 'text/plain' };
 
 http
   .createServer(async (req, res) => {

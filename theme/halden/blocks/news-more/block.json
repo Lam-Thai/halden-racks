@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "halden/news-more",
+	"title": "More from Halden",
+	"category": "halden",
+	"description": "Paper section with the latest posts as cards, leaving out the post being read. Hidden when there is nothing else to show.",
+	"attributes": {
+		"eyebrow": { "type": "string", "default": "Keep reading" },
+		"heading": { "type": "string", "default": "More from Halden" },
+		"count": { "type": "integer", "default": 3 }
+	},
+	"supports": { "html": false, "anchor": true },
+	"render": "file:./render.php"
+}

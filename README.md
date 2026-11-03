@@ -1,6 +1,20 @@
-# Amanah — WordPress prototype
+# Halden Racks — custom WordPress block theme
 
-A working WordPress website built from the client's sample home page, to answer their question: *can this level of design, animation and simplicity be delivered in WordPress?*
+A premium, motion-rich marketing site for **Halden Racks**, a fictional colocation company, built as a fully editable WordPress block theme. It shows that high-end design and animation don't have to give up WordPress's editor.
+
+- **Live site:** https://lam-thai.github.io/amanah-prototype/
+- **Try the WordPress admin** (opens in your browser, nothing to install): https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/Lam-Thai/amanah-prototype/main/blueprint.public.json
+
+## What I built
+
+- **Custom block theme, no page builder:** 20 custom blocks (scroll-scrubbed video hero, a Three.js 3D rack plan picker, a sticky story scroller with live canvas graphics, an interactive map, a quote and tour form with validation). Every one edits in the WordPress editor with a live preview, and has no build step.
+- **9 pages and a blog**, with conversion flows: the plan picker carries the chosen plan and quantity into a pre-filled quote form.
+- **Content as code:** pages live as block-markup files and are imported idempotently, so every fresh WordPress (local or the browser demo) is identical.
+- **Free hosting:** a crawler exports WordPress to static files on GitHub Pages; a WordPress Playground blueprint boots a real, editable copy in the visitor's browser.
+- **Performance and accessibility:** scripts load only on pages that use them; animations pause off-screen and respect reduced motion; keyboard-friendly tabs, forms and menu.
+- **AI-assisted workflow:** project agents and skills in `.claude/` (page builder, motion engineer, theme engineer, QA reviewer) built the pages in parallel against shared conventions.
+
+Halden Racks, its people, places and contact details are fictional. Video and photos are Mixkit stock (free licence); fonts are open-source (Poppins, Inter, JetBrains Mono).
 
 Everything here is free: no hosting bill, no paid plugins, no paid themes.
 
@@ -11,15 +25,15 @@ Everything here is free: no hosting bill, no paid plugins, no paid themes.
 ```
  your PC                                   the internet (free)
  ──────────                                ───────────────────
- theme/amanah/   ──►  WordPress running ──► 1. Website link   (GitHub Pages)
+ theme/halden/   ──►  WordPress running ──► 1. Website link   (GitHub Pages)
  (design + code)      on your PC            2. "Try the admin" link (WordPress Playground)
  seed/ (content)      (Playground)
 ```
 
 - **WordPress Playground** runs a full WordPress *inside Node.js* on your computer. No PHP, MySQL or XAMPP to install.
-- The **theme** (`theme/amanah/`) is the design: colours, fonts, header, footer, and the animated sections.
-- The **content** (`theme/amanah/seed/`) is the text of each page, stored as files so every fresh WordPress looks the same.
-- To share it, we **export** WordPress to plain files and host them on **GitHub Pages** (free). A second link opens a real WordPress admin in the client's browser via **playground.wordpress.net** (free).
+- The **theme** (`theme/halden/`) is the design: colours, fonts, header, footer, and the animated sections.
+- The **content** (`theme/halden/seed/`) is the text of each page, stored as files so every fresh WordPress looks the same.
+- To share it, we **export** WordPress to plain files and host them on **GitHub Pages** (free). A second link opens a real WordPress admin in the visitor's browser via **playground.wordpress.net** (free).
 
 ## Words you'll meet
 
@@ -48,13 +62,12 @@ Wait for `Ready! WordPress is running on http://127.0.0.1:9400`, then open:
 - the site: http://127.0.0.1:9400
 - the admin: http://127.0.0.1:9400/wp-admin/ (you're logged in automatically)
 
-Stop it with `Ctrl + C`. Each start is a fresh WordPress; the content is re-imported from `theme/amanah/seed/`.
+Stop it with `Ctrl + C`. Each start is a fresh WordPress; the content is re-imported from `theme/halden/seed/`.
 
 ## Change things
 
-- **Text on a page:** edit `theme/amanah/seed/pages/<page>.html`, save, reload the browser. Or edit in wp-admin → Pages (handy for trying things; the files win on the next restart).
-- **Colours / spacing:** `theme/amanah/assets/css/site.css` (global) or `assets/css/pages/<page>.css`.
-- **Highlighted words** (yellow, dashed underline) are details I wrote for the prototype that the client should confirm, like prices, dates and names.
+- **Text on a page:** edit `theme/halden/seed/pages/<page>.html`, save, reload the browser. Or edit in wp-admin → Pages (handy for trying things; the files win on the next restart).
+- **Colours / spacing:** `theme/halden/assets/css/site.css` (global) or `assets/css/pages/<page>.css`.
 
 ## Publish (free)
 

@@ -4,7 +4,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const root = path.resolve('theme/amanah/seed');
+const root = path.resolve('theme/halden/seed');
 const files = ['pages', 'posts'].flatMap((d) =>
   fs.existsSync(path.join(root, d)) ? fs.readdirSync(path.join(root, d)).filter((f) => f.endsWith('.html')).map((f) => path.join(root, d, f)) : []
 );
@@ -17,8 +17,8 @@ const report = (file, msg) => {
 
 for (const file of files) {
   const src = fs.readFileSync(file, 'utf8');
-  const head = src.match(/^\s*<!--\s*amanah:(?:page|post)\s+(\{.*?\})\s*-->/s);
-  if (!head) report(file, 'missing <!-- amanah:page {...} --> header');
+  const head = src.match(/^\s*<!--\s*halden:(?:page|post)\s+(\{.*?\})\s*-->/s);
+  if (!head) report(file, 'missing <!-- halden:page {...} --> header');
   else {
     try { JSON.parse(head[1]); } catch (e) { report(file, `header JSON: ${e.message}`); }
   }

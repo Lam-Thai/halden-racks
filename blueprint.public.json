@@ -1,9 +1,9 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
-		"title": "Amanah prototype",
+		"title": "Halden prototype",
 		"author": "Lam Thai",
-		"description": "A live WordPress in your browser with the Amanah theme and demo content. Changes are private to your browser tab and reset when it closes."
+		"description": "A live WordPress in your browser with the Halden theme and demo content. Changes are private to your browser tab and reset when it closes."
 	},
 	"landingPage": "/",
 	"login": true,
@@ -15,7 +15,7 @@
 		{
 			"step": "defineWpConfigConsts",
 			"consts": {
-				"AMANAH_DEMO": true
+				"HALDEN_DEMO": true
 			}
 		},
 		{
@@ -24,16 +24,16 @@
 				"resource": "git:directory",
 				"url": "https://github.com/Lam-Thai/amanah-prototype",
 				"ref": "main",
-				"path": "theme/amanah"
+				"path": "theme/halden"
 			},
 			"options": {
 				"activate": true,
-				"targetFolderName": "amanah"
+				"targetFolderName": "halden"
 			}
 		},
 		{
 			"step": "runPHP",
-			"code": "<?php require '/wordpress/wp-load.php'; amanah_seed_run();"
+			"code": "<?php require '/wordpress/wp-load.php'; halden_seed_run();"
 		}
 	]
 }

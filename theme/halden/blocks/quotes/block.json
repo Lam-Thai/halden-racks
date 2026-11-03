@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "halden/quotes",
+	"title": "Customer quotes",
+	"category": "halden",
+	"description": "One large testimonial with its result, then a scrolling rail of more quotes with previous/next buttons. Rail quotes are a list edited in the code editor.",
+	"attributes": {
+		"label": { "type": "string", "default": "Colocation customers" },
+		"quote": { "type": "string", "default": "Halden gives us colocation that is reliable, scalable and cheaper than the cloud." },
+		"name": { "type": "string", "default": "Priya Natarajan" },
+		"role": { "type": "string", "default": "CTO, Tidewater Games" },
+		"result": { "type": "string", "default": "10 to 15% lower cloud bill" },
+		"railTitle": { "type": "string", "default": "More from the building" },
+		"items": {
+			"type": "array",
+			"default": [
+				{ "result": "Better latency post-move", "quote": "\"Consistent uptime, a clean and modern floor, and support that actually answers.\"", "name": "Marcus Bell", "role": "President and CEO, Ridgeline Logistics" },
+				{ "result": "Rack live in 24 hours", "quote": "\"Strong partnerships run on trust and responsiveness. That's why we build on Halden.\"", "name": "Kestrel IT", "role": "MSP partner" },
+				{ "result": "Client since 2016", "quote": "\"We could not have built our business without Halden.\"", "name": "Owen Fraser", "role": "Owner, Brightline Media" },
+				{ "result": "100% Canadian residency", "quote": "\"Our costs and worries have gone down every year. Their responsiveness is remarkable.\"", "name": "Dr. Elena Sorensen", "role": "Founder, Juniper Clinics" }
+			]
+		}
+	},
+	"supports": { "html": false, "anchor": true },
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}

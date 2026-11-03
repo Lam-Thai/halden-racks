@@ -34,7 +34,7 @@ No `layout` attribute: the theme turns off WordPress's layout spacing so the des
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"cap"} -->
-<p class="cap">Also at 151 Front</p>
+<p class="cap">Also at 200 Foundry Row</p>
 <!-- /wp:paragraph -->
 ```
 
@@ -73,7 +73,7 @@ Block styles map to the design system: `is-style-red`, `is-style-ghost`, `is-sty
 
 ```html
 <!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full"><img src="{{theme}}/assets/images/power.avif" alt="Closed grey UPS cabinets with green status displays."/></figure>
+<figure class="wp-block-image size-full"><img src="{{theme}}/assets/images/power.webp" alt="Closed grey UPS cabinets with green status displays."/></figure>
 <!-- /wp:image -->
 ```
 Decorative image: `alt=""`. Add `"className":"x"` → `class="wp-block-image size-full x"`.
@@ -110,11 +110,11 @@ Decorative image: `alt=""`. Add `"className":"x"` → `class="wp-block-image siz
 <!-- /wp:html -->
 ```
 
-## Custom (amanah) blocks
+## Custom (halden) blocks
 
 Dynamic, so self-closing; all content is in the JSON attributes:
 
 ```html
-<!-- wp:amanah/page-hero {"title":"Rack your GPUs at <em>25 kW</em> a cabinet.","primaryUrl":"/contact/?plan=gpu"} /-->
+<!-- wp:halden/page-hero {"title":"Rack your GPUs at <em>25 kW</em> a cabinet.","primaryUrl":"/contact/?plan=gpu"} /-->
 ```
-In attribute JSON, `<` `>` must be written as `<` `>` and `"` as `"` (what WordPress itself writes). Attribute URLs are site paths (`/contact/`), not `{{home}}` tokens: `render.php` passes them through `amanah_url()`.
+In attribute JSON, write `<`, `>` and `"` as the escape sequences backslash-u-003c, backslash-u-003e and backslash-u-0022 (what WordPress itself writes). Some editing tools silently turn those sequences back into raw characters, so run `node scripts/check-seeds.mjs` after every seed edit. Attribute URLs are site paths (`/contact/`), not `{{home}}` tokens: `render.php` passes them through `halden_url()`.

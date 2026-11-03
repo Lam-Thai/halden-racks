@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "halden/hero-video",
+	"title": "Hero video",
+	"category": "halden",
+	"description": "Home page opening: full-screen footage that plays as the visitor scrolls, with three headline beats (wrap words in <em> for red). Beat 1 is the page heading. Images and videos take a full URL or a file name from the theme's assets/images folder.",
+	"attributes": {
+		"eyebrow1": { "type": "string", "default": "Colocation · 200 Foundry Row" },
+		"title1": { "type": "string", "default": "Port Alder colocation, built to <em>stay on.</em>" },
+		"eyebrow2": { "type": "string", "default": "Contained cold aisles, N+1 power" },
+		"title2": { "type": "string", "default": "Your servers, <em>always running.</em>" },
+		"eyebrow3": { "type": "string", "default": "Colocation plans for every size" },
+		"title3": { "type": "string", "default": "From one U to a <em>private suite.</em>" },
+		"primaryLabel": { "type": "string", "default": "See colocation plans" },
+		"primaryUrl": { "type": "string", "default": "#plans" },
+		"secondaryLabel": { "type": "string", "default": "Book a tour" },
+		"secondaryUrl": { "type": "string", "default": "/contact/#tour" },
+		"posterDesktop": { "type": "string", "default": "hero-poster.webp" },
+		"posterMobile": { "type": "string", "default": "hero-poster.webp" },
+		"posterAlt": { "type": "string", "default": "A dark, contained server aisle lit in blue, with glass doors at the far end." },
+		"videoDesktop": { "type": "string", "default": "hero-aisle.mp4" },
+		"videoMobile": { "type": "string", "default": "hero-aisle.mp4" },
+		"cue": { "type": "string", "default": "Scroll to explore" },
+		"note": { "type": "string", "default": "Illustrative footage" }
+	},
+	"supports": { "html": false, "anchor": true },
+	"render": "file:./render.php",
+	"style": "file:./style.css",
+	"viewScript": "file:./view.js"
+}

@@ -1,6 +1,6 @@
-# Amanah WordPress prototype
+# Halden Racks — WordPress theme prototype
 
-A pitch prototype answering the client's question: *can the design, motion and simplicity of `reference/sample-home.html` be delivered in WordPress?* It ships as a custom block theme, runs locally on WordPress Playground, and is shared as (1) a static export on GitHub Pages and (2) a live Playground link with wp-admin.
+A portfolio prototype for a fictional colocation company, Halden Racks: proof that a premium, motion-rich marketing site can be built as an editable WordPress block theme. It ships as a custom block theme, runs locally on WordPress Playground, and is shared as (1) a static export on GitHub Pages and (2) a live Playground link with wp-admin.
 
 The user is new to WordPress: explain WordPress concepts in plain words when reporting.
 
@@ -8,9 +8,9 @@ The user is new to WordPress: explain WordPress concepts in plain words when rep
 
 | Path | What it is |
 |---|---|
-| `reference/` | The client's sample split into `sample-home.html`, `sample.css`, `sample.js` + `assets/`. Read-only source of truth for look and motion. |
-| `theme/amanah/` | The block theme (mounted into WordPress as `wp-content/themes/amanah`). |
-| `theme/amanah/seed/` | Content-as-code: page/post files + `seed.php`, which loads them into WordPress on every boot. |
+| `reference/` | Local only (git-ignored): the original design reference the theme's look and motion were ported from. |
+| `theme/halden/` | The block theme (mounted into WordPress as `wp-content/themes/halden`). |
+| `theme/halden/seed/` | Content-as-code: page/post files + `seed.php`, which loads them into WordPress on every boot. |
 | `blueprint.json` | Local Playground boot recipe (activate theme, run seed). |
 | `scripts/` | Node helpers: static export, deploy. |
 | `docs/` | Beginner guides for the user (hosting, editing). |
@@ -36,7 +36,7 @@ Anchor targets other pages link to: `/colocation/#plans`, `/services/#dedicated-
 
 ## Rules every agent follows
 
-- **Links are tokens, never root-relative.** In seed files write `{{home}}/colocation/` and `{{theme}}/assets/images/power.avif`; in PHP use `home_url()` / `get_theme_file_uri()`; in JS read URLs from `data-*` attributes. (The Playground link serves WordPress under a sub-path, so `/colocation/` breaks there.)
+- **Links are tokens, never root-relative.** In seed files write `{{home}}/colocation/` and `{{theme}}/assets/images/power.webp`; in PHP use `home_url()` / `get_theme_file_uri()`; in JS read URLs from `data-*` attributes. (The Playground link serves WordPress under a sub-path, so `/colocation/` breaks there.)
 - **File ownership keeps parallel work safe.** Shared files (`theme.json`, `functions.php`, `inc/`, `assets/css/site.css`, `assets/js/site.js`, `parts/`, `templates/`, `seed/seed.php`) belong to the lead. A page agent owns only its seed file, its page CSS, and blocks it creates under `blocks/<page-slug>-*`. Need a shared change? Report it; don't make it.
-- **Facts come from the sample.** New copy follows the voice in the `amanah-design-system` skill; any invented fact (price, number, name, date) is wrapped as `<mark class="verify">…</mark>` in the seed so the user can confirm it with the client.
+- **Halden Racks is fictional.** Copy follows the voice and the brand facts in the `halden-design-system` skill; no real company, place, person, phone number or email appears anywhere.
 - Commit only when the user asks. Agents never commit.

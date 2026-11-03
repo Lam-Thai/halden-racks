@@ -1,0 +1,14 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "halden/site-footer",
+	"title": "Site footer",
+	"category": "halden",
+	"description": "Sales contacts, sitemap columns, addresses and legal links.",
+	"attributes": {
+		"phone": { "type": "string", "default": "+1 800 555 0142" },
+		"bigWord": { "type": "string", "default": "Halden" }
+	},
+	"supports": { "html": false, "multiple": false, "reusable": false },
+	"render": "file:./render.php"
+}

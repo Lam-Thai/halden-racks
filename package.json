@@ -1,10 +1,10 @@
 {
-  "name": "amanah-wp-prototype",
+  "name": "halden-wp-prototype",
   "private": true,
   "type": "module",
-  "description": "Amanah website prototype: a WordPress block theme, run locally with WordPress Playground and exported to a static site.",
+  "description": "Halden website prototype: a WordPress block theme, run locally with WordPress Playground and exported to a static site.",
   "scripts": {
-    "dev": "wp-playground-cli server --port=9400 --mount-dir ./theme/amanah /wordpress/wp-content/themes/amanah --blueprint=./blueprint.json --login",
+    "dev": "wp-playground-cli server --port=9400 --mount-dir ./theme/halden /wordpress/wp-content/themes/halden --blueprint=./blueprint.json --login",
     "export": "node scripts/export.mjs",
     "preview": "node scripts/preview.mjs",
     "deploy": "node scripts/deploy.mjs"

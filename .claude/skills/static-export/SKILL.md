@@ -6,10 +6,10 @@ disable-model-invocation: true
 
 # Export and publish
 
-Two deliverables for the client, both free:
+Two shareable links, both free:
 
 1. **Website link** — the WordPress site crawled into plain HTML/CSS/JS (`dist/`) and hosted on GitHub Pages.
-2. **Admin link** — `blueprint.public.json` opened on playground.wordpress.net: a real WordPress in the client's browser with the theme and content installed from the GitHub repo.
+2. **Admin link** — `blueprint.public.json` opened on playground.wordpress.net: a real WordPress in the visitor's browser with the theme and content installed from the GitHub repo.
 
 ## Steps
 
@@ -23,4 +23,4 @@ Two deliverables for the client, both free:
 
 - GitHub Pages serves under `/<repo-name>/`; the export rewrites URLs for that base, so open the deployed site, not files from disk.
 - The static site has no PHP: forms are demo-only (by design), and search/comments are absent.
-- The site is `noindex` (WordPress "discourage search engines" is on) so the prototype never shows up in Google under the client's name.
+- The site is `noindex` (WordPress "discourage search engines" is on) so the prototype never shows up in Google.
