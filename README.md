@@ -2,8 +2,8 @@
 
 A premium, motion-rich marketing site for **Halden Racks**, a fictional colocation company, built as a fully editable WordPress block theme. It shows that high-end design and animation don't have to give up WordPress's editor.
 
-- **Live site:** https://lam-thai.github.io/amanah-prototype/
-- **Try the WordPress admin** (opens in your browser, nothing to install): https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/Lam-Thai/amanah-prototype/main/blueprint.public.json
+- **Live site:** https://lam-thai.github.io/halden-racks/
+- **Try the WordPress admin** (opens in your browser, nothing to install): https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/Lam-Thai/halden-racks/main/blueprint.public.json
 
 ## What I built
 

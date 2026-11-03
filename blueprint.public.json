@@ -22,7 +22,7 @@
 			"step": "installTheme",
 			"themeData": {
 				"resource": "git:directory",
-				"url": "https://github.com/Lam-Thai/amanah-prototype",
+				"url": "https://github.com/Lam-Thai/halden-racks",
 				"ref": "main",
 				"path": "theme/halden"
 			},

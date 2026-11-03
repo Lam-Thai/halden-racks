@@ -12,7 +12,7 @@ import path from 'node:path';
 const args = Object.fromEntries(process.argv.slice(2).map((a) => a.replace(/^--/, '').split('=')));
 const pkg = JSON.parse(await fs.readFile('package.json', 'utf8'));
 const ORIGIN = (args.origin || 'http://127.0.0.1:9400').replace(/\/$/, '');
-// Default base: package.json → config.pagesBase (e.g. "/amanah-prototype" for user.github.io/amanah-prototype/).
+// Default base: package.json → config.pagesBase (e.g. "/halden-racks" for user.github.io/halden-racks/).
 const BASE = (args.base ?? pkg.config?.pagesBase ?? '').replace(/\/$/, '');
 const OUT = path.resolve('dist');
 
